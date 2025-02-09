@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création de tâche Trello</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Créer une tâche sur Trello</h2>
+    
+    <!-- Saisie des identifiants -->
+    <div class="form-group">
+      <label for="apiKey">Trello API Key</label>
+      <input type="text" id="apiKey" placeholder="Entrez votre API Key">
+    </div>
+    <div class="form-group">
+      <label for="token">Trello Token</label>
+      <input type="text" id="token" placeholder="Entrez votre Token">
+    </div>
+    <div class="form-group">
+      <button id="fetchBoards">Charger mes Boards</button>
+    </div>
+
+    <!-- Comment obtenir son api ket et token ?-->
+    <div class="form-group">
+      <p>Comment obtenir son api ket et token ?</p>
+      <a href="https://trello.com/app-key" target="_blank">Obtenir son API Key</a>
+      <a href="https://trello.com/app-key" target="_blank">Obtenir son Token</a>
+    </div>
+    
+    <!-- Sélection du board et de la liste -->
+    <div class="form-group">
+      <label for="boardsSelect">Choisissez un Board</label>
+      <select id="boardsSelect">
+        <option value="">Sélectionnez un board</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="listsSelect">Choisissez une Liste</label>
+      <select id="listsSelect">
+        <option value="">Sélectionnez une liste</option>
+      </select>
+    </div>
+    
+    <!-- Autres champs pour la création de la tâche -->
+    <div class="form-group">
+      <label for="labels">Étiquettes (séparées par une virgule)</label>
+      <input type="text" id="labels" placeholder="ex: label1,label2">
+    </div>
+    <div class="form-group">
+      <label for="title">Titre de la tâche</label>
+      <input type="text" id="title" placeholder="Titre de la tâche">
+    </div>
+    <div class="form-group">
+      <label for="description">Description de la tâche</label>
+      <textarea id="description" placeholder="Description de la tâche"></textarea>
+    </div>
+    
+    <button id="submit">Créer la tâche</button>
+    <p id="message"></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
